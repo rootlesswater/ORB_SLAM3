@@ -5,8 +5,8 @@ assert sys.version_info >= (3, 5)
 
 
 def dot(left, right):
-    assert(isinstance(left, sympy.Matrix))
-    assert(isinstance(right, sympy.Matrix))
+    assert isinstance(left, sympy.Matrix)
+    assert isinstance(right, sympy.Matrix)
 
     sum = 0
     for c in range(0, left.cols):
@@ -16,7 +16,7 @@ def dot(left, right):
 
 
 def squared_norm(m):
-    assert(isinstance(m, sympy.Matrix))
+    assert isinstance(m, sympy.Matrix)
     return dot(m, m)
 
 
@@ -49,7 +49,7 @@ def proj(v):
     assert m > 1
     assert n == 1
     l = [v[i] / v[m - 1] for i in range(0, m - 1)]
-    r = sympy.Matrix(m - 1, 1,  l)
+    r = sympy.Matrix(m - 1, 1, l)
     return r
 
 
