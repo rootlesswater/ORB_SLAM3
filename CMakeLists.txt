@@ -9,7 +9,7 @@ endif()
 message("Build type: " ${CMAKE_BUILD_TYPE})
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}  -O3") #  -Wall ")#
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}   -O3") # -Wall")#
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}   -O3 -DBOOST_ALLOW_DEPRECATED_HEADERS -include /usr/include/boost/serialization/library_version_type.hpp") # -Wall")#
 set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE}") # -march=native")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE}") # -march=native")
 
